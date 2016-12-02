@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<root>
+	<item id="1001" type="100"/>
+	<item id="1002" type="100"/>
+	<item id="1003" type="100"/>
+	<item id="1011" type="100" qlty="1"/>
+	<item id="1012" type="100" qlty="1"/>
+	<item id="1013" type="100" qlty="1"/>
+	<item id="2000" type="101" qlty="1"/>
+	<item id="2001" type="101" qlty="1"/>
+	<item id="2002" type="101" qlty="1"/>
+	<item id="2003" type="101" qlty="1"/>
+	<item id="2004" type="101" qlty="1"/>
+	<item id="2005" type="101" qlty="1"/>
+	<item id="2006" type="101" qlty="1"/>
+	<item id="2007" type="101" qlty="1"/>
+	<item id="2008" type="101" qlty="1"/>
+	<item id="2009" type="101" qlty="1"/>
+	<item id="2010" type="101" qlty="1"/>
+	<item id="2011" type="101" qlty="1"/>
+	<item id="2012" type="101" qlty="1"/>
+	<item id="2013" type="101" qlty="1"/>
+	<item id="2014" type="101" qlty="1"/>
+	<item id="2015" type="101" qlty="1"/>
+	<item id="2016" type="101" qlty="1"/>
+	<item id="2017" type="101" qlty="1"/>
+	<item id="2018" type="101" qlty="1"/>
+	<item id="2019" type="101" qlty="1"/>
+	<item id="2020" type="101" qlty="1"/>
+	<item id="2021" type="101" qlty="1"/>
+	<item id="3000" type="101" qlty="2"/>
+	<item id="3001" type="101" qlty="3"/>
+	<item id="3002" type="101" qlty="1"/>
+	<item id="3003" type="101" qlty="2"/>
+	<item id="3004" type="101" qlty="3"/>
+	<item id="3005" type="101" qlty="1"/>
+	<item id="3006" type="101" qlty="2"/>
+	<item id="3007" type="101" qlty="3"/>
+	<item id="3008" type="101" qlty="1"/>
+	<item id="3009" type="101" qlty="2"/>
+	<item id="3010" type="101" qlty="3"/>
+	<item id="3011" type="101" qlty="1"/>
+	<item id="3012" type="101" qlty="2"/>
+	<item id="3013" type="101" qlty="3"/>
+	<item id="3014" type="101" qlty="1"/>
+	<item id="3015" type="101" qlty="2"/>
+	<item id="3016" type="101" qlty="3"/>
+	<item id="3017" type="101" qlty="1"/>
+	<item id="3018" type="101" qlty="2"/>
+	<item id="3019" type="101" qlty="3"/>
+	<item id="3020" type="101" qlty="1"/>
+	<item id="3021" type="101" qlty="2"/>
+	<item id="3022" type="101" qlty="3"/>
+	<item id="3023" type="101" qlty="1"/>
+	<item id="3024" type="101" qlty="2"/>
+</root>

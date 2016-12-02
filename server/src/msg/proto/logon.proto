@@ -1,0 +1,48 @@
+//登录消息
+package pbmsg;
+option optimize_for = LITE_RUNTIME;
+
+//------------------------------------------------------------------------------
+// 消息 - example
+//------------------------------------------------------------------------------
+message NcExample
+{
+	required string info = 1;
+}
+
+message NsExample
+{
+	required string info = 1;
+}
+
+//------------------------------------------------------------------------------
+// 消息 - 登陆
+//------------------------------------------------------------------------------
+message NcLogin
+{
+	required uint32		acc_id		=		1;					// 帐号id
+	required string		digest		=		2;					// 根据登陆服务器发给客户端的临时密码计算所得
+	required uint32		time		=		3;					// 时间
+}
+
+message NsLogin
+{
+	required int32		error		=		1;					// 错误码，0-为成功，1-系统错误
+	optional bool		has_player	=		2;					// 如果登陆成功，该值有意义，告知客户端，服务器是否已经有了已创建角色
+	// 收到该消息后，如果error=0&&hasPlayer=1, 则客户端进入游戏，开始向服务器发起各个初始化请求，见msg_init.proto
+}
+
+//------------------------------------------------------------------------------
+// 消息 - 创建角色
+//------------------------------------------------------------------------------
+message NcCreatePlayer
+{
+	required string		name			=	1;					// 玩家名字
+	required int32		plant_index		=	2;					// 选择的第一个武将的所在创建数组中的下标
+}
+
+message NsCreatePlayer
+{
+	required int32		error		=		1;					// 0-代表成功，1-系统错误 2-名字已经存在
+}
+

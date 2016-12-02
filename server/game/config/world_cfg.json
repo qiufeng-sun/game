@@ -1,0 +1,29 @@
+{
+	"world":{
+		"id":1,
+		"name":"go server"
+	},
+
+	"world_db":{
+		"ip":"127.0.0.1:8091",
+		"bucket":"AOW",
+		"pwd":"111111",
+		"max_wait":100
+	},
+
+	"log_db":{
+		"host":"127.0.0.1:3306",
+		"user":"test",
+		"pwd":"111111",
+		"db_name":"log"
+	},
+
+	"logon_conn":{
+		"addr":"127.0.0.1:1030"		
+	},
+
+	"player_conn":{
+		"lst_addr":":7080",
+		"max_num":100
+	}
+}
