@@ -1,17 +1,17 @@
 #beego - v1.7.0
-git@git.n.xiaomi.com:third_party/beego.git      github.com/astaxie/beego		v1.7.1
+https://github.com/astaxie/beego.git      github.com/astaxie/beego		v1.7.1
 
 #redigo
-git@git.n.xiaomi.com:third_party/redigo.git     github.com/garyburd/redigo		v1.0.0
+https://github.com/garyburd/redigo.git     github.com/garyburd/redigo		v1.0.0
 
 #protobuf
-git@git.n.xiaomi.com:third_party/protobuf.git   github.com/golang/protobuf		1f49d83
+https://github.com/golang/protobuf.git   github.com/golang/protobuf		1f49d83
 
 #thrift - v0.9.1
-git@git.n.xiaomi.com:third_party/thrift.git     git.apache.org/thrift.git    0.9.1
+https://github.com/apache/thrift.git     git.apache.org/thrift.git    0.9.1
 
 #mysql
-git@git.n.xiaomi.com:third_party/go-sql-driver-mysql.git github.com/go-sql-driver/mysql v1.2
+https://github.com/go-sql-driver/mysql.git github.com/go-sql-driver/mysql v1.2
 
 #util to do use reversion
 git@git.n.xiaomi.com:sunxiguang/util.git        util master
