@@ -1,0 +1,5 @@
+#beego - v1.7.0
+git@git.n.xiaomi.com:third_party/beego.git	github.com/astaxie/beego		v1.7.0
+
+#mangos
+git@git.n.xiaomi.com:third_party/mangos.git		github.com/go-mangos/mangos		v1.2.0
