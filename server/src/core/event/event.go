@@ -2,6 +2,8 @@ package event
 
 import (
 	"reflect"
+
+	"util"
 	"util/logs"
 )
 
@@ -17,6 +19,8 @@ var g_events = map[string][]EventFunc{}
 func Register(event interface{}, f EventFunc) {
 	name := reflect.ValueOf(event).Elem().Type().Name()
 	g_events[name] = append(g_events[name], f)
+
+	logs.Infoln("register event:", name, util.Caller(1))
 }
 
 //

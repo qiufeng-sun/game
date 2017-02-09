@@ -14,7 +14,7 @@ https://github.com/apache/thrift.git     git.apache.org/thrift.git    0.9.1
 https://github.com/go-sql-driver/mysql.git github.com/go-sql-driver/mysql v1.2
 
 #util to do use reversion
-git@git.n.xiaomi.com:sunxiguang/util.git        util master
+https://github.com/qiufeng-sun/util.git        util master
 
 #couchbase
 https://github.com/couchbase/go-couchbase.git   github.com/couchbaselabs/go-couchbase master
