@@ -11,7 +11,7 @@ import (
 	"core/net/socket"
 	"core/task"
 
-	//"world/db"
+	"world/db"
 	"world/define"
 	"world/player/logon"
 	"world/player/session"
@@ -63,8 +63,7 @@ func (w *WorldServer) Init() bool {
 	//task.PAddTmpTask(&TaskTest{})
 
 	// game db启动
-	//e = db.Serve(&define.GetServerCfg().WorldDB) // to do
-	//checkErr(e)
+	db.Init(res.Path_Cfg)
 
 	// 注册消息处理函数
 	hfunc.Register()

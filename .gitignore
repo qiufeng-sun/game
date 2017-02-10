@@ -3,3 +3,4 @@
 *godeps/
 */pkg/
 */bin/
+*.run

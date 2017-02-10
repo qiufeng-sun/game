@@ -7,12 +7,13 @@ import (
 	"time"
 
 	"core/net/msg"
+	"core/server"
 	"util/logs"
 )
 
 // 常量
 const (
-	xReadWriteDeadline = 1e9 // 连接读写等待时间
+	xReadWriteDeadline = 1e10 // 连接读写等待时间
 )
 
 // socket server
@@ -57,7 +58,7 @@ func (s *Server) Stop() {
 }
 
 // 处理连接
-func (s *Server) handleClient(listener *net.TCPListener) error {
+func (s *Server) handleClient(listener *net.TCPListener) {
 	// log
 	logs.Info("server listen start")
 	defer logs.Info("server listen end")
@@ -72,7 +73,7 @@ func (s *Server) handleClient(listener *net.TCPListener) error {
 	for {
 		select {
 		case <-s.chClose:
-			return nil
+			return
 
 		default:
 		}
@@ -84,12 +85,18 @@ func (s *Server) handleClient(listener *net.TCPListener) error {
 		listener.SetDeadline(time.Now().Add(xReadWriteDeadline))
 		conn, e := listener.Accept()
 		if e != nil {
-			continue
+			if e, ok := e.(net.Error); ok && e.Temporary() {
+				continue
+			}
+			logs.Warnln(e)
+			server.Stop()
+			return
 		}
 
 		// 创建新的客户端
-		client := s.clientMgr.createClient(conn)
-		if nil == client {
+		client, e := s.clientMgr.createClient(conn)
+		if e != nil || nil == client {
+			logs.Warnln("create new client failed! error:", e, ",client:", client)
 			continue
 		}
 

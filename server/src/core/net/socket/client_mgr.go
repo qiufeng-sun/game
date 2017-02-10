@@ -4,6 +4,7 @@ package socket
 //
 import (
 	"errors"
+	"fmt"
 	"net"
 	"sync"
 
@@ -93,7 +94,7 @@ func (mgr *clientMgr) gcClient() {
 }
 
 // 创建新的客户端
-func (mgr *clientMgr) createClient(conn net.Conn) *Client {
+func (mgr *clientMgr) createClient(conn net.Conn) (*Client, error) {
 	// client id
 	var clientId int
 
@@ -105,14 +106,15 @@ func (mgr *clientMgr) createClient(conn net.Conn) *Client {
 			mgr.clients[clientId] = newClient(mgr.maxUsed, mgr)
 			mgr.maxUsed += 1
 		} else {
-			return nil
+			return nil, fmt.Errorf("too many client connectted! cur max:%v", mgr.maxUsed)
 		}
 	}
 
 	// client
 	client := mgr.getClient(clientId)
 	if nil == client {
-		return nil
+		logs.Warnln("client is nil! id:", clientId)
+		return nil, nil
 	}
 
 	// reset
@@ -121,7 +123,7 @@ func (mgr *clientMgr) createClient(conn net.Conn) *Client {
 	// 管理起来
 	mgr.wgClose.Add(1)
 
-	return client
+	return client, nil
 }
 
 // 释放客户端
@@ -144,6 +146,7 @@ func (mgr *clientMgr) releaseClient(client *Client) {
 // 获取客户端
 func (mgr *clientMgr) getClient(id int) *Client {
 	if !mgr.IsClientIdValid(id) {
+		logs.Warn("invalid client id! id:%v", id)
 		return nil
 	}
 

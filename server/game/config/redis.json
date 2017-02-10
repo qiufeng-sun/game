@@ -1,0 +1,8 @@
+{
+	"cache":{
+		"cfg":[
+			{"address":"127.0.0.1", "port":6379, "pwd":"", "maxIdle":50, "maxTotal":300}
+		],
+		"useNum":1
+	}
+}

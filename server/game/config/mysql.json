@@ -1,0 +1,13 @@
+{
+    "default": {
+        "dbdriver": "mysql", 
+        "protocol": "tcp", 
+        "address": "127.0.0.1:3306", 
+        "username": "root", 
+        "password": "!!11aaAA", 
+        "database": "test", 
+        "charset": "utf8",
+		"maxIdle": 10,
+		"maxConn": 30
+    }
+}
