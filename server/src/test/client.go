@@ -39,7 +39,12 @@ func (this *Client) Send(msgId EMsgId, msgData interface{}) error {
 		return e
 	}
 
-	_, e = this.c.Write(append(h, b...))
+	sz := uint32(len(h) + len(b))
+	buff := msg.Uint32Bytes(sz)
+	buff = append(buff, h...)
+	buff = append(buff, b...)
+
+	_, e = this.c.Write(buff)
 	if e != nil {
 		return e
 	}
